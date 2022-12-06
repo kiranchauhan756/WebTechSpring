@@ -1,0 +1,20 @@
+package stragedy.kiet.edu;
+
+import java.io.*;
+
+public class StragedyPatternDemo {
+
+	public static void main(String[] args) throws IOException, NumberFormatException {
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter first num");
+		float num1 = Float.parseFloat(br.readLine());
+		System.out.println("Enter second num");
+		float num2 = Float.parseFloat(br.readLine());
+		Context context = new Context(new Multiplication());
+		System.out.println("Multiplication= " + context.executeStragedy(num1, num2));
+		context = new Context(new Subtraction());
+		System.out.println("Subtraction= " + context.executeStragedy(num1, num2));
+	}
+
+}
